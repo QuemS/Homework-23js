@@ -5,7 +5,7 @@ secret = Math.floor(secret) + 1;
 let numberAttempts = 10;
 let flag = false;
 
-console.log(`Secret =  ${secret}`);
+//console.log(`Secret =  ${secret}`);
 
 function calc() {
     if (flag) {
