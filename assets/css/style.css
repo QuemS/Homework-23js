@@ -1,0 +1,9 @@
+body{
+    background-color: gainsboro;
+    padding: 0;
+}
+
+
+.resultAttempts {
+    transition: 0.5s;
+}
