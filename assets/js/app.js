@@ -5,7 +5,7 @@ secret = Math.floor(secret) + 1;
 let numberAttempts = 10;
 let flag = false;
 
-//console.log(`Secret =  ${secret}`);
+console.log(`Secret =  ${secret}`);
 
 function calc() {
     if (flag) {
@@ -31,8 +31,8 @@ function calc() {
         
     }else if((numberAttempts >= 0) && (numberInput == secret )){
         resultText = `УРААА!!! Вы победил `;
-        displayBlock.classList.remove('displayBlock')
-        resultText2 = `Вам понадобилось ${10 - numberAttempts} попыток`;
+        displayBlock.classList.remove('displayBlock');
+        resultText2 = `Вы угадали число с ${10 - numberAttempts} раза.`;
         numberAttempts = " ";
         flag = true;
         
