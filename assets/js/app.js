@@ -13,7 +13,9 @@ function calc() {
     }
     
     let numberInput = +numberInputOne.value;
-    let resultText;
+    let displayBlock = document.querySelector('.displayBlock');
+    let resultText, resultText2;
+    
     //console.log(`numberAttempts =  ${numberAttempts}`);
 
     if ((numberAttempts > 1) && (numberInput !=secret ) && (numberInput > secret)){
@@ -28,13 +30,16 @@ function calc() {
         resultText = `Игра окончена!!! У вас закончились попытки`;
         
     }else if((numberAttempts >= 0) && (numberInput == secret )){
-        resultText = `УРААА!!! Вы победил`;
+        resultText = `УРААА!!! Вы победил `;
+        displayBlock.classList.remove('displayBlock')
+        resultText2 = `Вам понадобилось ${10 - numberAttempts} попыток`;
         numberAttempts = " ";
         flag = true;
         
         
     }
     outputText.innerHTML = resultText;
+    outputText2.innerHTML = resultText2;
     resultAttempts.innerHTML = numberAttempts;
     
 }
